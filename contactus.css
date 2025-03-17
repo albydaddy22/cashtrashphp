@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo{
+    width: 250px;
+    margin-left: 40%;
+}
+
+header{
+    padding-top: 10px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    border-bottom: 0px solid rgb(229, 229, 229);
+    transition-duration: 0.5s;
+}
+
+header li{
+    display: inline;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+header li a{
+    text-decoration: none;
+    align-items: center;
+    color: #31332f;
+    font-weight: 600;
+    font-size: 19px;
+    transition-duration: 0.3s;
+}
+
+header ul li a:hover{
+    font-size: 22px;
+    color: #0C7F59;
+}
+
+.logonoscritta{
+    width: 50px;
+    display: none;
+    margin-left: 50%;
+}
+
+.menu{
+    position: absolute;
+    right: 5%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menuicon{
+    display: none;
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.login-form h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #242622;
+}
+
+.login-form h2{
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0C7F59;
+    text-align: center;
+}
+
+.login-form .main{
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.content{
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: #ffffff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.form-img{
+    flex-basis: 50%;
+    background: #f3f3f3;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+input{
+    border-radius: 35px;
+}
+
+.login-form form{
+    margin: 30px 0;
+}
+
+.login-form input{
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #676767;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    border: none;
+    background: #f7fafc;
+    transition: 0.3s ease;
+}
+
+.login-form input:focus{
+    background: transparent;
+    border: 1px solid #0C7F59;
+}
+
+.login-form textarea{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background: #f7fafc;
+    font-stretch: 16px;
+    resize: none;
+    color: #676767;
+}
+
+.login-form textarea:focus{
+    background: transparent;
+    border: none;
+    border: 1px solid #0C7F59;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: #31332f;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.login-form button{
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+    height: 44px;
+    background-image: linear-gradient(45deg, #2DE5A8, #0C7F59);
+    color: white;
+    font-weight: bold;
+    border-radius: 35px;
+    border-top-left-radius: 4px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.login-form button:hover{
+    background-image: linear-gradient(45deg, #C9FFE6, #4CFFC9);
+    color: rgb(36, 38, 34);
+    border-top-left-radius: 35px
+}
+
+.account a{
+    color: #25b988;
+    transition-duration: 0.1s;
+}
+
+.account a:hover{
+    color: #148a63;
+    text-decoration: underline;
+}
+
+@media(max-width: 550px){
+    .logo{
+        display: none;
+    }
+
+    .logonoscritta{
+        display: flex;
+    }
+
+    .hideonmobile{
+        display: none;
+    }
+
+    .menuicon{
+        display: flex;
+    }
+}
+
+@media(max-width: 700px){
+    .login-form .main{
+        flex-direction: column;
+    }
+
+    .login-form form{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .form-img{
+        border-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        order: 2;
+    }
+
+    .content{
+        order: 1;
+        border-radius: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}

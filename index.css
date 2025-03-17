@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    display: grid;
+    grid-auto-rows: 100%;
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 9999;
+    border-bottom: 0px solid rgb(229, 229, 229);
+    transition-duration: 0.5s;
+}
+
+header li{
+    display: inline;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+header li a{
+    text-decoration: none;
+    align-items: center;
+    color: #565952;
+    font-weight: 400;
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+
+header ul li a:hover{
+    font-size: 17px;
+    color: #0C7F59;
+}
+
+.bgColor{
+    background-color: rgb(243, 249, 249);
+    height: 80px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.loginbtn{
+    font-size: 18px;
+    width: 130px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    color: #565952;
+    font-weight: bold;
+    border-radius: 20px;
+    border-top-left-radius: 2px;
+    border: 1px solid #0C7F59;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.loginbtn:hover{
+    background-image: linear-gradient(45deg, #C9FFE6, #4CFFC9);
+    border: none;
+    width: 135px;
+    border-top-left-radius: 20px;
+}
+
+.signupbtn{
+    font-size: 18px;
+    width: 130px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #2DE5A8, #0C7F59);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border-top-left-radius: 2px;
+    border: 0px solid;
+    transition: 0.3s ease;
+}
+
+.signupbtn:hover{
+    background-image: linear-gradient(45deg, #C9FFE6, #4CFFC9);
+    color: #565952;
+    width: 135px;
+    border-top-left-radius: 20px;
+}
+
+.logo{
+    width: 250px;
+    margin-left: 30%;
+}
+
+.logonoscritta{
+    width: 50px;
+    display: none;
+    margin-left: 50%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.flexbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuicon{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    right: 5%;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.maintextbox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10%;
+}
+
+.maintextbox h1{
+    font-size: 40px;
+    color: #31332f;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropd{
+    position: relative;
+    display: inline-block;
+}
+
+.dropd img{
+    width: 26px;
+}
+
+.dropd-content{
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.dropd:hover .dropd-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.startbtn{
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(45deg, #2DE5A8, #0C7F59);
+    border: none;
+    border-radius: 35px;
+    border-top-left-radius: 4px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+
+.startbtn:hover{
+    background-image: linear-gradient(45deg, #C9FFE6, #4CFFC9);
+    color: #31332f;
+    width: 105%;
+    border-top-left-radius: 35px;
+}
+
+.startbtn a{
+    text-decoration: none;
+}
+
+.side-image{
+    width: 53%;
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+}
+
+.side-image img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.producttextbox{
+    position: absolute;
+    top: 135%;
+    left: 8%;
+    width: 25%;
+}
+
+.producttextbox p{
+    text-align: left;
+    font-size: 20px;
+    color: #565952;
+    margin-top: 5px;
+}
+
+.producttextbox h1{
+    text-align: left;
+    font-size: 42px;
+    color: #1bbe88;
+}
+
+.product-img{
+    width: 30%;
+    position: absolute;
+    top: 150%;
+    transform: translateY(-50%);
+    right: 15%;
+}
+
+.product-img img{
+    width: 100%;
+}
+
+.ytvideo{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 250%;
+    transform: translateY(-50%);
+    left: 15%;
+}
+
+.ytvideo iframe{
+    border-radius: 35px;
+}
+
+.videotextbox p{
+    text-align: left;
+    font-size: 20px;
+    color: #565952;
+    margin-top: 5px;
+}
+
+.videotextbox h1{
+    text-align: left;
+    font-size: 42px;
+    color: #1bbe88;
+}
+
+.videotextbox{
+    position: absolute;
+    top: 235%;
+    width: 28%;
+    right: 8%;
+}
+
+.videotextbox p, .videotextbox h1{
+    text-align: right;
+}
+
+.infobar{
+    height: 60vh;
+}
+
+.info-container{
+    width: 100%;
+    height: 100%;
+    background-color: #303636;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-container div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ruoli p, .ruoli h4, .info-actions ul li a, .info-actions h4, .info-others h4, .info-others ul li{
+    color: rgb(212, 212, 212);
+    text-align: center;
+}
+
+.ruoli h4, .info-actions h4, .info-others h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ruoli{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 8px;
+}
+
+.info-actions ul{
+    list-style: none;
+    line-height: 40px;
+}
+
+.info-actions ul li, .info-others ul li{
+    text-align: center;
+}
+
+.info-actions ul li a{
+    text-decoration: none;
+}
+
+.info-actions ul li a:hover{
+    text-decoration: underline;
+}
+
+.info-others ul{
+    line-height: 38px;
+    list-style: none;
+}
+
+@media(max-width: 1250px){
+    .hideonmobile{
+        display: none;
+    }
+
+    .menuicon{
+        display: flex;
+    }
+    
+    .side-image{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 60%;
+    }
+
+    .maintextbox{
+        margin: 0;
+        top: 30%;
+    }
+    
+    .maintextbox h1{
+        text-align: center;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 1000px){
+    .maintextbox{
+        top: 35%;
+    }
+
+    .side-image{
+        width: 65%;
+    }
+
+    .product-img{
+        width: 40%;
+    }
+
+    .ytvideo{
+        width: 350px;
+        height: 233px;
+    }
+
+
+}
+
+@media(max-width: 800px){
+    .side-image{
+        width: 85%;
+    }
+
+    .producttextbox{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 115%;
+        width: 45%;
+    }
+
+    .producttextbox h1, .producttextbox p{
+        text-align: center;
+    }
+
+    .product-img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 150%;
+        width: 50%
+    }
+
+    .videotextbox{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 215%;
+        width: 45%;
+    }
+
+    .videotextbox p, .videotextbox h1{
+        text-align: center;
+    }
+
+    .ytvideo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 250%;
+    }
+}
+
+@media(max-width: 550px){
+    .logo{
+        display: none;
+    }
+
+    .logonoscritta{
+        display: flex;
+    }
+
+    .maintextbox{
+        top: 40%;
+    }
+
+    .side-image{
+        width: 100%;
+        right: 0;
+    }
+
+    .producttextbox{
+        width: 65%;
+    }
+
+    .product-img{
+        width: 70%;
+    }
+
+    .videotextbox{
+        width: 55%;
+    }
+
+    .ytvideo{
+        width: 300px;
+        height: 200px;
+    }
+
+    .ruoli h4, .info-actions h4, .info-others h4{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .ruoli p, .info-actions ul li a, .info-others ul li{
+        font-size: 12px;
+    }
+}

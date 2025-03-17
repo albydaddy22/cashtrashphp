@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-snap-type: y;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: 100%;
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 250px;
+}
+
+.hero{
+    background-color: #fefffe;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: 3%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero2{
+    width: 100%;
+    padding-top: 3%;
+}
+
+.titlebox{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(212, 242, 229);
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    text-align: center;
+    margin-top: 8%;
+    font-weight: 600;
+    color: #31332f;
+}
+
+.subtitle{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #31332f;
+}
+
+header{
+    padding-top: 10px;
+    display: flex;
+    position: fixed;
+    padding-left: 6%;
+    gap: 55%;
+    top: 0%;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    border-bottom: 0px solid rgb(229, 229, 229);
+    transition-duration: 0.5s;
+}
+
+header ul{
+    padding-top: 10px;
+}
+
+header ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+header ul li a{
+    text-decoration: none;
+    align-items: center;
+    color: #31332f;
+    font-weight: 600;
+    font-size: 19px;
+    transition-duration: 0.3s;
+}
+
+.lefttext{
+    width: 30%;
+    height: 55%;
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.lefttext p{
+    color: #31332f;
+    position: absolute;
+    left: 8%;
+    top: 9%;
+    width: 90%;
+    font-size: 19px;
+    text-align: left;
+    color: #31332f;
+    z-index: 999;
+}
+
+.teamphoto{
+    border-radius: 25px;
+    width: 30%;
+    position: absolute;
+    right: 48%;
+    top: 40%;
+    z-index: 1;
+}
+
+.bgColor{
+    background-color: white;
+    padding-top: 1%;
+    height: 70px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.infobar{
+    width:100%;
+    height: 50%;
+    line-height: 80%;
+    background-color: rgb(36, 38, 34);;
+    position: absolute;
+    bottom: -90%;
+    scroll-snap-align: start;
+}
+
+.information .infoTitle{
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(212, 212, 212);
+}
+
+.information .web{
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: 85%;
+}
+
+.information .graphic{
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: 65%;
+}
+
+.information .photographer{
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: 45%;
+}
+
+.information .highrank{
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: 25%;
+}
+
+.information .tech{
+    width: 14%;
+    height: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: 5%;
+}
+
+.information .infosoc{
+    height: 5%;
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    bottom: -84%;
+    display: flex;
+}
+
+.infosoc .email{
+    color: rgb(154, 154, 154);
+    height: 5%;
+}
+
+.infosoc .rights{
+    position: absolute;
+    right: 2%;
+    bottom: -60%;
+    color: rgb(154, 154, 154);
+}
+
+.infosoc input{
+    border-radius: 10px;
+    border-top-left-radius: 2px;
+    text-align: center;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 1%;
+    outline: none;
+    transition-duration: 0.3s;
+}
+
+.infosoc .emailbtn{
+    margin-left: 1%;
+    font-size: 15px;
+    width: 7%;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top-left-radius: 2px;
+    border: none;
+    background-image: linear-gradient(45deg, #2DE5A8, #0C7F59);
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.infosoc .emailbtn:hover{
+    background-image: linear-gradient(45deg, #C9FFE6, #4CFFC9);
+    width: 7.5%;
+    border-top-left-radius: 10px;
+}
+
+.infosoc .emailbtn:active{
+    border-top-left-radius: 10px;
+    background-image: linear-gradient(45deg, #D8FFF2, #D8FFF2);
+}
+
+.infosoc input:hover{
+    border-top-left-radius: 10px;
+    border: 2px solid #0C7F59;
+}
+
+.infosoc input:focus{
+    border-top-left-radius: 10px;
+    border: 3px solid #4cd3a6;
+}
+
+.information a{
+    color: rgb(154, 154, 154);
+}
+
+header ul li a:hover{
+    font-size: 22px;
+    color: #0C7F59;
+}
